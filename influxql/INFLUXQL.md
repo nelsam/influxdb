@@ -41,9 +41,15 @@ unicode_char        = /* an arbitrary Unicode code point except newline */ .
 ```
 
 ## Letters and digits
+<<<<<<< HEAD
 
 Letters are the set of ASCII characters plus the underscore character _ (U+005F) is considered a letter.
 
+=======
+
+Letters are the set of ASCII characters plus the underscore character _ (U+005F) is considered a letter.
+
+>>>>>>> 070279ac971b5bdb865679524161692cc66a664c
 Only decimal digits are supported.
 
 ```
@@ -101,7 +107,11 @@ VALUES       WHERE        WITH         WRITE
 InfluxQL supports decimal integer literals.  Hexadecimal and octal literals are not currently supported.
 
 ```
+<<<<<<< HEAD
 int_lit             = ( "1" … "9" ) { digit } .
+=======
+int_lit             = digit { digit } .
+>>>>>>> 070279ac971b5bdb865679524161692cc66a664c
 ```
 
 ### Floats
@@ -611,7 +621,11 @@ binary_op        = "+" | "-" | "*" | "/" | "AND" | "OR" | "=" | "!=" | "<" |
 
 expr             = unary_expr { binary_op unary_expr } .
 
+<<<<<<< HEAD
 unary_expr       = "(" expr ")" | var_ref | time_lit | string_lit | int_lit |
+=======
+unary_expr       = "(" expr ")" | var_ref | time_lit | string_lit |
+>>>>>>> 070279ac971b5bdb865679524161692cc66a664c
                    float_lit | bool_lit | duration_lit | regex_lit .
 ```
 
