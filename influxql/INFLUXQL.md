@@ -19,7 +19,7 @@ Group       = "(" Expression ")" .
 Option      = "[" Expression "]" .
 Repetition  = "{" Expression "}" .
 ```
-
+sed -r 's/^.{58}//'
 Notation operators in order of increasing precedence:
 
 ```
@@ -611,7 +611,7 @@ binary_op        = "+" | "-" | "*" | "/" | "AND" | "OR" | "=" | "!=" | "<" |
 
 expr             = unary_expr { binary_op unary_expr } .
 
-unary_expr       = "(" expr ")" | var_ref | time_lit | string_lit |
+unary_expr       = "(" expr ")" | var_ref | time_lit | string_lit | int_lit |
                    float_lit | bool_lit | duration_lit | regex_lit .
 ```
 
