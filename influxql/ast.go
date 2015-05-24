@@ -1401,7 +1401,7 @@ func (s *DeleteStatement) RequiredPrivileges() ExecutionPrivileges {
 // ShowSeriesStatement represents a command for listing series in the database.
 type ShowSeriesStatement struct {
 	// Measurement(s) the series are listed for.
-	Source Source
+	Sources Sources
 
 	// An expression evaluated on a series name or tag.
 	Condition Expr
@@ -1421,6 +1421,11 @@ type ShowSeriesStatement struct {
 func (s *ShowSeriesStatement) String() string {
 	var buf bytes.Buffer
 	_, _ = buf.WriteString("SHOW SERIES")
+
+	if s.Sources != nil {
+		_, _ = buf.WriteString(" FROM ")
+		_, _ = buf.WriteString(s.Sources.String())
+	}
 
 	if s.Condition != nil {
 		_, _ = buf.WriteString(" WHERE ")
@@ -2339,7 +2344,7 @@ func Walk(v Visitor, node Node) {
 		Walk(v, n.SortFields)
 
 	case *ShowSeriesStatement:
-		Walk(v, n.Source)
+		Walk(v, n.Sources)
 		Walk(v, n.Condition)
 
 	case *ShowTagKeysStatement:
