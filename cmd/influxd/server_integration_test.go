@@ -1454,6 +1454,7 @@ func runTestsData(t *testing.T, testName string, nodes Cluster, database, retent
 		},
 
 		{
+			name:  `show field keys`,
 			reset: true,
 			write: `{"database" : "%DB%", "retentionPolicy" : "%RP%", "points": [
 		{"name": "cpu", "tags": {"host": "server01"},"time": "2009-11-10T23:00:00Z","fields": {"field1": 100}},
@@ -1461,16 +1462,24 @@ func runTestsData(t *testing.T, testName string, nodes Cluster, database, retent
 		{"name": "cpu", "tags": {"host": "server01", "region": "useast"},"time": "2009-11-10T23:00:00Z","fields": {"field1": 200, "field2": 300, "field3": 400}},
 		{"name": "cpu", "tags": {"host": "server02", "region": "useast"},"time": "2009-11-10T23:00:00Z","fields": {"field1": 200, "field2": 300, "field3": 400}},
 		{"name": "gpu", "tags": {"host": "server01", "region": "useast"},"time": "2009-11-10T23:00:00Z","fields": {"field4": 200, "field5": 300}},
-		{"name": "gpu", "tags": {"host": "server03", "region": "caeast"},"time": "2009-11-10T23:00:00Z","fields": {"field6": 200, "field7": 300}}
+		{"name": "gpu", "tags": {"host": "server03", "region": "caeast"},"time": "2009-11-10T23:00:00Z","fields": {"field6": 200, "field7": 300}},
+		{"name": "disk", "tags": {"host": "server03", "region": "caeast"},"time": "2009-11-10T23:00:00Z","fields": {"field8": 200, "field9": 300}}
 		]}`,
 			query:    `SHOW FIELD KEYS`,
 			queryDb:  "%DB%",
-			expected: `{"results":[{"series":[{"name":"cpu","columns":["fieldKey"],"values":[["field1"],["field2"],["field3"]]},{"name":"gpu","columns":["fieldKey"],"values":[["field4"],["field5"],["field6"],["field7"]]}]}]}`,
+			expected: `{"results":[{"series":[{"name":"cpu","columns":["fieldKey"],"values":[["field1"],["field2"],["field3"]]},{"name":"disk","columns":["fieldKey"],"values":[["field8"],["field9"]]},{"name":"gpu","columns":["fieldKey"],"values":[["field4"],["field5"],["field6"],["field7"]]}]}]}`,
 		},
 		{
+			name:     `show field keys`,
 			query:    `SHOW FIELD KEYS FROM cpu`,
 			queryDb:  "%DB%",
 			expected: `{"results":[{"series":[{"name":"cpu","columns":["fieldKey"],"values":[["field1"],["field2"],["field3"]]}]}]}`,
+		},
+		{
+			name:     `show field keys`,
+			query:    `SHOW FIELD KEYS FROM /[cg]pu/`,
+			queryDb:  "%DB%",
+			expected: `{"results":[{"series":[{"name":"cpu","columns":["fieldKey"],"values":[["field1"],["field2"],["field3"]]},{"name":"gpu","columns":["fieldKey"],"values":[["field4"],["field5"],["field6"],["field7"]]}]}]}`,
 		},
 
 		// Database control tests
