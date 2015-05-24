@@ -1388,6 +1388,7 @@ func runTestsData(t *testing.T, testName string, nodes Cluster, database, retent
 		},
 
 		{
+			name:  `show tag values`,
 			reset: true,
 			write: `{"database" : "%DB%", "retentionPolicy" : "%RP%", "points": [
 		{"name": "cpu", "tags": {"host": "server01"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}},
@@ -1395,36 +1396,48 @@ func runTestsData(t *testing.T, testName string, nodes Cluster, database, retent
 		{"name": "cpu", "tags": {"host": "server01", "region": "useast"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}},
 		{"name": "cpu", "tags": {"host": "server02", "region": "useast"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}},
 		{"name": "gpu", "tags": {"host": "server02", "region": "useast"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}},
-		{"name": "gpu", "tags": {"host": "server03", "region": "caeast"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}}
+		{"name": "gpu", "tags": {"host": "server03", "region": "caeast"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}},
+		{"name": "disk", "tags": {"host": "server04", "region": "caeast"},"time": "2009-11-10T23:00:00Z","fields": {"value": 100}}
 		]}`,
 			query:    "SHOW TAG VALUES WITH KEY = host",
 			queryDb:  "%DB%",
-			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"],["server02"],["server03"]]}]}]}`,
+			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"],["server02"],["server03"],["server04"]]}]}]}`,
 		},
 		{
+			name:     `show tag values`,
 			query:    `SHOW TAG VALUES WITH KEY = "host"`,
 			queryDb:  "%DB%",
-			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"],["server02"],["server03"]]}]}]}`,
+			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"],["server02"],["server03"],["server04"]]}]}]}`,
 		},
 		{
+			name:     `show tag values`,
 			query:    `SHOW TAG VALUES FROM cpu WITH KEY = host WHERE region = 'uswest'`,
 			queryDb:  "%DB%",
 			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"]]}]}]}`,
 		},
 		{
+			name:     `show tag values`,
 			query:    `SHOW TAG VALUES WITH KEY = host WHERE region =~ /ca.*/`,
 			queryDb:  "%DB%",
-			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server03"]]}]}]}`,
+			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server03"],["server04"]]}]}]}`,
 		},
 		{
+			name:     `show tag values`,
 			query:    `SHOW TAG VALUES WITH KEY = region WHERE host !~ /server0[12]/`,
 			queryDb:  "%DB%",
 			expected: `{"results":[{"series":[{"name":"regionTagValues","columns":["region"],"values":[["caeast"]]}]}]}`,
 		},
 		{
+			name:     `show tag values`,
 			query:    `SHOW TAG VALUES FROM cpu WITH KEY IN (host, region) WHERE region = 'uswest'`,
 			queryDb:  "%DB%",
 			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"]]},{"name":"regionTagValues","columns":["region"],"values":[["uswest"]]}]}]}`,
+		},
+		{
+			name:     `show tag values`,
+			query:    `SHOW TAG VALUES FROM /[cg]pu/ WITH KEY = host`,
+			queryDb:  "%DB%",
+			expected: `{"results":[{"series":[{"name":"hostTagValues","columns":["host"],"values":[["server01"],["server02"],["server03"]]}]}]}`,
 		},
 
 		{
