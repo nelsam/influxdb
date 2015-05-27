@@ -1,10 +1,10 @@
 package api
 
 import (
-	"github.com/influxdb/influxdb/cluster"
-	cmn "github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	cmn "gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 // The following are the api that is accessed by any api

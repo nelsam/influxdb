@@ -9,11 +9,11 @@ import (
 	"os"
 	"time"
 
-	. "github.com/influxdb/influxdb/checkers"
-	influxdb "github.com/influxdb/influxdb/client"
-	"github.com/influxdb/influxdb/common"
-	. "github.com/influxdb/influxdb/integration/helpers"
-	"github.com/influxdb/influxdb/protocol"
+	. "gopkg.in/nelsam/influxdb.v0/checkers"
+	influxdb "gopkg.in/nelsam/influxdb.v0/client"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	. "gopkg.in/nelsam/influxdb.v0/integration/helpers"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 	. "launchpad.net/gocheck"
 )
 

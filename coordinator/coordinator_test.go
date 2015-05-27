@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/parser"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/parser"
 	. "launchpad.net/gocheck"
 )
 

@@ -1,6 +1,6 @@
 package engine
 
-import "github.com/influxdb/influxdb/protocol"
+import "gopkg.in/nelsam/influxdb.v0/protocol"
 
 type PointRange struct {
 	startTime int64

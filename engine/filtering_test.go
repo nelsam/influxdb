@@ -3,8 +3,8 @@ package engine
 import (
 	"testing"
 
-	"github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/parser"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/parser"
 	. "launchpad.net/gocheck"
 )
 

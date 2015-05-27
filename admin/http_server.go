@@ -7,7 +7,7 @@ import (
 
 	"github.com/rakyll/statik/fs"
 
-	_ "github.com/influxdb/influxdb/statik"
+	_ "gopkg.in/nelsam/influxdb.v0/statik"
 )
 
 type HttpServer struct {

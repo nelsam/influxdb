@@ -1,6 +1,6 @@
 package engine
 
-import "github.com/influxdb/influxdb/parser"
+import "gopkg.in/nelsam/influxdb.v0/parser"
 
 func NewQueryEngine(next Processor, query *parser.SelectQuery, shards []uint32) (Processor, error) {
 	limit := query.Limit

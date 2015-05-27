@@ -5,7 +5,7 @@ import (
 	"time"
 
 	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 // Acts as a buffer for writes

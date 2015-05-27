@@ -13,9 +13,9 @@ import (
 	"runtime"
 	"time"
 
-	influxdb "github.com/influxdb/influxdb/client"
-	"github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/configuration"
+	influxdb "gopkg.in/nelsam/influxdb.v0/client"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
 	. "launchpad.net/gocheck"
 )
 

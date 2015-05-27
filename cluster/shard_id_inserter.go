@@ -3,8 +3,8 @@ package cluster
 import (
 	"fmt"
 
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 // A processor to set the ShardId on the series to `id`

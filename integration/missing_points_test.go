@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	influxdb "github.com/influxdb/influxdb/client"
-	. "github.com/influxdb/influxdb/integration/helpers"
+	influxdb "gopkg.in/nelsam/influxdb.v0/client"
+	. "gopkg.in/nelsam/influxdb.v0/integration/helpers"
 	. "launchpad.net/gocheck"
 )
 

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdb/influxdb/common"
+	"gopkg.in/nelsam/influxdb.v0/common"
 )
 
 // this file provides the high level api of the query object
