@@ -4,14 +4,14 @@
 
 package protobuf
 
-import proto "code.google.com/p/gogoprotobuf/proto"
+import proto "golang.org/x/gogoprotobuf/proto"
 import math "math"
 
-// discarding unused import gogoproto "code.google.com/p/gogoprotobuf/gogoproto/gogo.pb"
+// discarding unused import gogoproto "golang.org/x/gogoprotobuf/gogoproto/gogo.pb"
 
 import io6 "io"
 import fmt24 "fmt"
-import code_google_com_p_gogoprotobuf_proto12 "code.google.com/p/gogoprotobuf/proto"
+import code_google_com_p_gogoprotobuf_proto12 "golang.org/x/gogoprotobuf/proto"
 
 import fmt25 "fmt"
 import strings12 "strings"
@@ -19,7 +19,7 @@ import reflect12 "reflect"
 
 import fmt26 "fmt"
 import strings13 "strings"
-import code_google_com_p_gogoprotobuf_proto13 "code.google.com/p/gogoprotobuf/proto"
+import code_google_com_p_gogoprotobuf_proto13 "golang.org/x/gogoprotobuf/proto"
 import sort6 "sort"
 import strconv6 "strconv"
 import reflect13 "reflect"

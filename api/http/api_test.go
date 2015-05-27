@@ -12,13 +12,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/cluster"
-	. "github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/coordinator"
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/parser"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	. "gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/coordinator"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/parser"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 	. "launchpad.net/gocheck"
 )
 
@@ -749,7 +749,7 @@ func (self *ApiSuite) TestDbUserOperations(c *C) {
 	defer resp.Body.Close()
 	c.Assert(resp.StatusCode, Equals, libhttp.StatusBadRequest)
 
-	// Fix #477 - Username should support @ character - https://github.com/influxdb/influxdb/issues/447
+	// Fix #477 - Username should support @ character - https://gopkg.in/nelsam/influxdb.v0/issues/447
 	url = self.formatUrl("/db/db1/users?u=root&p=root")
 	resp, err = libhttp.Post(url, "", bytes.NewBufferString(`{"name":"paul@influxdb.com", "password": "password"}`))
 	c.Assert(err, IsNil)

@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"time"
 
-	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/_vendor/raft"
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/coordinator"
-	"github.com/influxdb/influxdb/server"
+	log "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/_vendor/raft"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/coordinator"
+	"gopkg.in/nelsam/influxdb.v0/server"
 	"github.com/jmhodges/levigo"
 )
 

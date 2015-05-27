@@ -1,8 +1,8 @@
 package coordinator
 
 import (
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/common"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	"gopkg.in/nelsam/influxdb.v0/common"
 	. "launchpad.net/gocheck"
 )
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type OperatorResult int

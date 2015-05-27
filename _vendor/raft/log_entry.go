@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"io"
 
-	"code.google.com/p/gogoprotobuf/proto"
-	"github.com/influxdb/influxdb/_vendor/raft/protobuf"
+	"golang.org/x/gogoprotobuf/proto"
+	"gopkg.in/nelsam/influxdb.v0/_vendor/raft/protobuf"
 )
 
 // A log entry stores a single item in the log.

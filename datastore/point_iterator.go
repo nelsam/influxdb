@@ -3,11 +3,11 @@ package datastore
 import (
 	"time"
 
-	"code.google.com/p/goprotobuf/proto"
-	"code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/datastore/storage"
-	"github.com/influxdb/influxdb/metastore"
-	"github.com/influxdb/influxdb/protocol"
+	"golang.org/x/goprotobuf/proto"
+	"golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/datastore/storage"
+	"gopkg.in/nelsam/influxdb.v0/metastore"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 // PointIterator takes a slice of iterators and their corresponding

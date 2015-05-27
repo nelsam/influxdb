@@ -1,7 +1,7 @@
 package wal
 
 import (
-	logger "code.google.com/p/log4go"
+	logger "golang.org/x/log4go"
 	"fmt"
 	"io/ioutil"
 	"os"

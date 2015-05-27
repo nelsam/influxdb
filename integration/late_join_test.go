@@ -3,7 +3,7 @@ package integration
 import (
 	"os"
 
-	. "github.com/influxdb/influxdb/integration/helpers"
+	. "gopkg.in/nelsam/influxdb.v0/integration/helpers"
 	. "launchpad.net/gocheck"
 )
 

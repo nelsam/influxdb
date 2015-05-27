@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 const (

@@ -4,9 +4,9 @@ package coordinator
 // queries to write their output back into the db
 
 import (
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/parser"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/parser"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type ContinuousQueryWriter struct {

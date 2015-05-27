@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/protocol"
+	log "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 var (

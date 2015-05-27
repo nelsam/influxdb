@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/influxdb/influxdb/configuration"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
 	rocksdb "github.com/influxdb/rocksdb"
 )
 

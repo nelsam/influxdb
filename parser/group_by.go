@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/common"
+	log "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/common"
 )
 
 type GroupByClause struct {

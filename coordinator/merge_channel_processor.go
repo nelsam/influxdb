@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"code.google.com/p/log4go"
+	"golang.org/x/log4go"
 
-	"github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 // This struct is responsible for merging responses from multiple

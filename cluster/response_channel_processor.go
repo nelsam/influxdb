@@ -1,9 +1,9 @@
 package cluster
 
 import (
-	"code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/protocol"
+	"golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 // ResponseChannelProcessor converts Series to Responses. This is used

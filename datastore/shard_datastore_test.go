@@ -5,9 +5,9 @@ import (
 	"os"
 	"path"
 
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/datastore/storage"
-	"github.com/influxdb/influxdb/metastore"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/datastore/storage"
+	"gopkg.in/nelsam/influxdb.v0/metastore"
 
 	. "launchpad.net/gocheck"
 )

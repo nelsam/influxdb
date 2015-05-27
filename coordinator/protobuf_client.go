@@ -10,9 +10,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/protocol"
+	log "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type ProtobufClient struct {

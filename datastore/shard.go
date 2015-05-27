@@ -8,14 +8,14 @@ import (
 	"sync"
 	"time"
 
-	"code.google.com/p/goprotobuf/proto"
-	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/datastore/storage"
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/metastore"
-	"github.com/influxdb/influxdb/parser"
-	"github.com/influxdb/influxdb/protocol"
+	"golang.org/x/goprotobuf/proto"
+	log "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/datastore/storage"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/metastore"
+	"gopkg.in/nelsam/influxdb.v0/parser"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type Shard struct {

@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"code.google.com/p/goprotobuf/proto"
-	logger "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/protocol"
+	"golang.org/x/goprotobuf/proto"
+	logger "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type log struct {

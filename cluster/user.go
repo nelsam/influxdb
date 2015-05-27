@@ -3,9 +3,9 @@ package cluster
 import (
 	"regexp"
 
-	"code.google.com/p/go.crypto/bcrypt"
+	"golang.org/x/go.crypto/bcrypt"
 	"github.com/influxdb/go-cache"
-	"github.com/influxdb/influxdb/common"
+	"gopkg.in/nelsam/influxdb.v0/common"
 )
 
 var userCache *cache.Cache

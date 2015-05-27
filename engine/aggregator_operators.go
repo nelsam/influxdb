@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"code.google.com/p/goprotobuf/proto"
+	"golang.org/x/goprotobuf/proto"
 
-	"github.com/influxdb/influxdb/common"
-	"github.com/influxdb/influxdb/parser"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/common"
+	"gopkg.in/nelsam/influxdb.v0/parser"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type PointSlice []protocol.Point

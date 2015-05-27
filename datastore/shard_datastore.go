@@ -10,13 +10,13 @@ import (
 	"sync"
 	"time"
 
-	log "code.google.com/p/log4go"
+	log "golang.org/x/log4go"
 	"github.com/BurntSushi/toml"
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/datastore/storage"
-	"github.com/influxdb/influxdb/metastore"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/datastore/storage"
+	"gopkg.in/nelsam/influxdb.v0/metastore"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type ShardDatastore struct {

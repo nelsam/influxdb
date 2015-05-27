@@ -5,11 +5,11 @@ import (
 	"net"
 	"sync"
 
-	log "code.google.com/p/log4go"
-	"github.com/influxdb/influxdb/api"
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/configuration"
-	"github.com/influxdb/influxdb/protocol"
+	log "golang.org/x/log4go"
+	"gopkg.in/nelsam/influxdb.v0/api"
+	"gopkg.in/nelsam/influxdb.v0/cluster"
+	"gopkg.in/nelsam/influxdb.v0/configuration"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 
 	collectd "github.com/kimor79/gollectd"
 )

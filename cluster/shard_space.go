@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdb/influxdb/common"
+	"gopkg.in/nelsam/influxdb.v0/common"
 )
 
 type ShardSpace struct {

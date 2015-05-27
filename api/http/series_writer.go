@@ -3,8 +3,8 @@ package http
 // This implements the SeriesWriter interface for use with the API
 
 import (
-	"github.com/influxdb/influxdb/engine"
-	"github.com/influxdb/influxdb/protocol"
+	"gopkg.in/nelsam/influxdb.v0/engine"
+	"gopkg.in/nelsam/influxdb.v0/protocol"
 )
 
 type SeriesWriter struct {

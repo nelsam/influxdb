@@ -8,7 +8,7 @@ import (
 
 	"math"
 
-	"code.google.com/p/goprotobuf/proto"
+	"golang.org/x/goprotobuf/proto"
 )
 
 var String = proto.String

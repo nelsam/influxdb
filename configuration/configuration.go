@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	log "code.google.com/p/log4go"
+	log "golang.org/x/log4go"
 	"github.com/BurntSushi/toml"
 )
 

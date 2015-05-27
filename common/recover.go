@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"runtime"
 
-	log "code.google.com/p/log4go"
+	log "golang.org/x/log4go"
 )
 
 func RecoverFunc(database, query string, cleanup func(err interface{})) {
